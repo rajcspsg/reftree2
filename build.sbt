@@ -50,11 +50,11 @@ val core = crossProject(JSPlatform, JVMPlatform)
     name := "reftree",
     libraryDependencies ++= Seq(
       "com.chuusai" %%% "shapeless" % "2.3.2",
-      "com.lihaoyi" %%% "sourcecode" % "0.1.3",
-      "com.lihaoyi" %%% "fastparse" % "2.1.2",
+      "com.lihaoyi" %%% "sourcecode" % "0.2.1",
+      "com.lihaoyi" %%% "fastparse" % "2.3.0",
       "io.github.stanch" %%% "zipper" % "0.5.2",
-      "com.softwaremill.quicklens" %%% "quicklens" % "1.4.8",
-      "com.github.julien-truffaut" %%% "monocle-macro" % "1.4.0",
+      "com.softwaremill.quicklens" %%% "quicklens" % "1.6.1",
+      "com.github.julien-truffaut" %%% "monocle-macro" % "1.7.3",
       "com.outr" %%% "scribe" % "1.4.2",
       "org.scalatest" %%% "scalatest" % "3.0.3" % Test,
       "org.scalacheck" %%% "scalacheck" % "1.13.5" % Test
@@ -62,8 +62,8 @@ val core = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
-      "org.apache.xmlgraphics" % "batik-transcoder" % "1.9",
+      "org.scala-lang.modules" %% "scala-xml" % "1.3.0",
+      "org.apache.xmlgraphics" % "batik-transcoder" % "1.13",
       "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha3",
       "de.sciss" %% "fingertree" % "1.5.2"
     )
@@ -91,7 +91,7 @@ val demo = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "com.lihaoyi" % "ammonite" % "1.7.1" % Test cross CrossVersion.full
+      "com.lihaoyi" % "ammonite" % "2.3.8" % Test cross CrossVersion.full
     )
   )
   .jsSettings(
